@@ -9,6 +9,7 @@ var rename        = require('gulp-rename');
 var templateCache = require('gulp-angular-templatecache');
 var uglify        = require('gulp-uglify');
 var merge         = require('merge-stream');
+var tasks         = require('gulp-task-listing');
 
 // Where our files are located
 var jsFiles   = "src/js/**/*.js";
@@ -83,4 +84,8 @@ gulp.task('default', ['html', 'browserify'], function() {
   gulp.watch("src/index.html", ['html']);
   gulp.watch(viewFiles, ['views']);
   gulp.watch(jsFiles, ['browserify']);
+});
+
+gulp.task('help', function () {
+  return tasks();
 });
