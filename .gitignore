@@ -37,3 +37,16 @@ node_modules
 build/*
 dist/*
 src/js/config/app.templates.js
+
+# VS Code exclusions
+
+.vscode
+
+# Visual Studio 2015 cache/options directory
+.vs/
+project.xml
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln
